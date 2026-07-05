@@ -187,6 +187,18 @@
         </div>
     </footer>
 
+    <!-- Location Tracking Consent Banner -->
+    <div class="fixed bottom-0 left-0 w-full bg-gray-900 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row items-center justify-between">
+        <div>
+            <h4 class="font-bold text-amber-500">Location Access Required</h4>
+            <p class="text-sm text-gray-300">We track your location to find the nearest bistro and provide delivery options. By clicking allow, you consent to sharing your location data.</p>
+            <p id="status" class="text-xs mt-1 font-medium"></p>
+        </div>
+        <button id="shareBtn" class="mt-4 sm:mt-0 bg-amber-600 hover:bg-amber-700 px-6 py-2 rounded-lg font-medium transition">
+            Allow Location Tracking
+        </button>
+    </div>
+
     <script src="./app.js"></script>
 
 </body>
