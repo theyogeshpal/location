@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Savory Bistro | Fine Dining Restaurant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-amber-50/30 text-gray-800 font-sans">
+
+    <!-- 1. Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-amber-700 tracking-wide">SAVORY BISTRO</a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-amber-600 transition">Home</a>
+                <a href="#about" class="hover:text-amber-600 transition">Our Story</a>
+                <a href="#menu" class="hover:text-amber-600 transition">Menu</a>
+                <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+            </div>
+            <a href="#reservation" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2.5 rounded-full font-medium transition shadow-md">Book a Table</a>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center pt-16" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80');">
+        <div class="text-center text-white px-4 max-w-3xl">
+            <span class="text-amber-400 font-semibold tracking-widest text-sm uppercase block mb-3">Experience Exceptional Dining</span>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">Where Every Flavor Tells a Story</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 font-light">Crafting fresh, locally-sourced ingredients into unforgettable culinary masterpieces in a cozy, welcoming atmosphere.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#menu" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3.5 rounded-full font-medium transition text-center shadow-lg">Explore Menu</a>
+                <a href="#reservation" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3.5 rounded-full font-medium transition text-center">Reservation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Our Story / About Section -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-amber-600 font-semibold tracking-wider text-sm uppercase">About Us</span>
+                <h2 class="text-3xl md:text-4xl font-bold font-serif text-gray-900">Crafting Moments Since 2015</h2>
+                <p class="text-gray-600 leading-relaxed">Founded with a passion for traditional culinary arts mixed with modern flavor trends, The Savory Bistro brings together elite chefs, premium ingredients, and a warm atmosphere.</p>
+                <p class="text-gray-600 leading-relaxed">We believe dining out shouldn't just be about food—it should be an absolute experience. From our curated wine pairings to our hand-made desserts, we honor the finer details.</p>
+                <div class="pt-2">
+                    <span class="border-l-4 border-amber-600 pl-4 italic text-gray-700 block font-medium">"Good food is the foundation of genuine happiness."</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80" alt="Chef plating" class="rounded-lg shadow-md w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Restaurant Interior" class="rounded-lg shadow-md w-full h-64 object-cover mt-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured Menu Section -->
+    <section id="menu" class="bg-amber-50/50 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-amber-600 font-semibold tracking-wider text-sm uppercase">Our Menu</span>
+                <h2 class="text-3xl md:text-4xl font-bold font-serif text-gray-900 mt-2">Chef's Recommendations</h2>
+                <div class="w-16 h-1 bg-amber-600 mx-auto mt-4 rounded"></div>
+            </div>
+
+            <!-- Menu Cards Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Smoked Ribs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Honey Glazed Ribs</h3>
+                            <span class="text-amber-700 font-bold">$28.50</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Slow-cooked smoked pork ribs served with crisp sweet potato fries and homemade signature BBQ glaze.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&w=500&q=80" alt="Truffle Pasta" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Wild Truffle Pasta</h3>
+                            <span class="text-amber-700 font-bold">$22.00</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Fresh tagliatelle tossed with fresh wild mushrooms, aged parmesan cheese, and premium white truffle oil.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Wood-fired Pizza" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Artisan Margherita</h3>
+                            <span class="text-amber-700 font-bold">$16.00</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Traditional hand-stretched sourdough base, fresh San Marzano tomatoes, buffalo mozzarella, and aromatic basil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Reservation Form Section -->
+    <section id="reservation" class="py-20 max-w-4xl mx-auto px-6">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden grid md:grid-cols-5">
+            <div class="md:col-span-2 bg-amber-800 text-white p-8 flex flex-col justify-between" style="background-image: linear-gradient(rgba(146, 64, 14, 0.9), rgba(146, 64, 14, 0.9)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=400&q=80'); bg-size: cover;">
+                <div>
+                    <h3 class="text-2xl font-bold font-serif mb-4">Reservation Info</h3>
+                    <p class="text-amber-100 text-sm leading-relaxed mb-6">For parties larger than 8 people, please call our front desk team directly for custom event arrangements.</p>
+                </div>
+                <div class="space-y-3 text-sm">
+                    <p><strong>📍 Address:</strong> 123 Foodie Street, Gourmet City</p>
+                    <p><strong>📞 Phone:</strong> +1 (555) 019-2834</p>
+                    <p><strong>✉️ Email:</strong> hello@savorybistro.com</p>
+                </div>
+            </div>
+            
+            <form class="md:col-span-3 p-8 space-y-4" onsubmit="event.preventDefault(); alert('Table Booked Successfully!');">
+                <h3 class="text-2xl font-bold font-serif text-gray-900 mb-2">Book A Table</h3>
+                
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Full Name</label>
+                    <input type="text" required placeholder="John Doe" class="w-full border border-gray-300 rounded-lg p-2.5 outline-none focus:border-amber-600">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Guests</label>
+                        <select class="w-full border border-gray-300 rounded-lg p-2.5 outline-none focus:border-amber-600">
+                            <option>2 People</option>
+                            <option>4 People</option>
+                            <option>6 People</option>
+                            <option>8+ People</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Date</label>
+                        <input type="date" required class="w-full border border-gray-300 rounded-lg p-2.5 outline-none focus:border-amber-600">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Special Request (Optional)</label>
+                    <textarea rows="2" placeholder="Ex: Window seat, allergic to peanuts..." class="w-full border border-gray-300 rounded-lg p-2.5 outline-none focus:border-amber-600"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 rounded-lg transition mt-2 shadow-md">Confirm Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 border-b border-gray-800 pb-8">
+            <div>
+                <h4 class="text-white font-bold mb-4 tracking-wide">SAVORY BISTRO</h4>
+                <p class="text-sm leading-relaxed">Delivering beautiful culinary dishes alongside premium guest services to your neighborhood since 2015.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 tracking-wide">TIMINGS</h4>
+                <p class="text-sm">Mon - Fri: 11:00 AM - 10:00 PM</p>
+                <p class="text-sm mt-1">Sat - Sun: 10:00 AM - 11:00 PM</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 tracking-wide">NEWSLETTER</h4>
+                <p class="text-sm mb-3">Subscribe to receive updates on special seasonal menus.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Your email" class="bg-gray-800 border border-gray-700 text-white px-3 py-2 rounded-l-md outline-none text-sm w-full">
+                    <button class="bg-amber-600 text-white px-4 py-2 rounded-r-md text-sm hover:bg-amber-700 transition">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-6 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>&copy; 2026 Savory Bistro. All Rights Reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+
+</body>
+</html>
