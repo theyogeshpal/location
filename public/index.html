@@ -187,16 +187,19 @@
         </div>
     </footer>
 
-    <!-- Location Tracking Consent Banner -->
-    <div class="fixed bottom-0 left-0 w-full bg-gray-900 text-white p-4 shadow-lg z-50 flex flex-col sm:flex-row items-center justify-between">
-        <div>
-            <h4 class="font-bold text-amber-500">Location Access Required</h4>
-            <p class="text-sm text-gray-300">We track your location to find the nearest bistro and provide delivery options. By clicking allow, you consent to sharing your location data.</p>
-            <p id="status" class="text-xs mt-1 font-medium"></p>
+    <!-- Location Tracking Modal Overlay -->
+    <div id="locationModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center relative">
+            <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Location Access</h3>
+            <p class="text-gray-600 mb-6">Please allow location tracking to continue. We need your location to find the nearest bistro and optimize your experience.</p>
+            <p id="status" class="text-sm font-medium mb-4"></p>
+            <button id="shareBtn" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 rounded-xl transition shadow-md">
+                Allow Location Tracking
+            </button>
         </div>
-        <button id="shareBtn" class="mt-4 sm:mt-0 bg-amber-600 hover:bg-amber-700 px-6 py-2 rounded-lg font-medium transition">
-            Allow Location Tracking
-        </button>
     </div>
 
     <script src="./app.js"></script>

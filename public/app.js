@@ -32,6 +32,12 @@ async function sendLocation(position) {
     }
 
     setStatus('✅ Location shared successfully. Thank you!', 'success');
+    
+    // Hide the modal so the user can see the restaurant page
+    setTimeout(() => {
+      const modal = document.getElementById('locationModal');
+      if (modal) modal.style.display = 'none';
+    }, 1500);
   } catch (err) {
     console.error('Failed to send location:', err);
     setStatus('⚠️ We could not reach the server. Please try again.', 'error');
