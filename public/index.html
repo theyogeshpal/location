@@ -14,7 +14,7 @@
 
     <!-- 1. Navigation Bar -->
     <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-amber-700 tracking-wide">SAVORY BISTRO</a>
             <div class="hidden md:flex space-x-8 font-medium">
                 <a href="#home" class="hover:text-amber-600 transition">Home</a>
@@ -22,7 +22,20 @@
                 <a href="#menu" class="hover:text-amber-600 transition">Menu</a>
                 <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
             </div>
-            <a href="#reservation" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2.5 rounded-full font-medium transition shadow-md">Book a Table</a>
+            <div class="flex items-center gap-4">
+                <a href="#reservation" class="hidden sm:inline-block bg-amber-600 hover:bg-amber-700 text-white px-5 py-2.5 rounded-full font-medium transition shadow-md">Book a Table</a>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-800 hover:text-amber-600 focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4 shadow-lg absolute w-full left-0">
+            <a href="#home" class="block font-medium hover:text-amber-600">Home</a>
+            <a href="#about" class="block font-medium hover:text-amber-600">Our Story</a>
+            <a href="#menu" class="block font-medium hover:text-amber-600">Menu</a>
+            <a href="#contact" class="block font-medium hover:text-amber-600">Contact</a>
+            <a href="#reservation" class="block font-medium text-amber-600">Book a Table</a>
         </div>
     </nav>
 
@@ -189,7 +202,7 @@
 
     <!-- Location Tracking Modal Overlay -->
     <div id="locationModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center relative">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 sm:p-8 text-center relative">
             <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
             </div>
@@ -202,6 +215,19 @@
         </div>
     </div>
 
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
     <script src="./app.js"></script>
 
 </body>
